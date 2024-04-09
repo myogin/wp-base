@@ -4,7 +4,7 @@
  *
  * @link https://jetpack.com/
  *
- * @package yogi
+ * @package yogi-theme
  */
 
 /**
@@ -14,26 +14,26 @@
  * See: https://jetpack.com/support/responsive-videos/
  * See: https://jetpack.com/support/content-options/
  */
-function yogi_jetpackyogietup() {
+function yogi_theme_jetpack_setup() {
 	// Add theme support for Infinite Scroll.
-	add_themeyogiupport(
+	add_theme_support(
 		'infinite-scroll',
 		array(
 			'container' => 'main',
-			'render'    => 'yogi_infiniteyogicroll_render',
+			'render'    => 'yogi_theme_infinite_scroll_render',
 			'footer'    => 'page',
 		)
 	);
 
 	// Add theme support for Responsive Videos.
-	add_themeyogiupport( 'jetpack-responsive-videos' );
+	add_theme_support( 'jetpack-responsive-videos' );
 
 	// Add theme support for Content Options.
-	add_themeyogiupport(
+	add_theme_support(
 		'jetpack-content-options',
 		array(
 			'post-details' => array(
-				'stylesheet' => 'yogi-style',
+				'stylesheet' => 'yogi-theme-style',
 				'date'       => '.posted-on',
 				'categories' => '.cat-links',
 				'tags'       => '.tags-links',
@@ -48,16 +48,16 @@ function yogi_jetpackyogietup() {
 		)
 	);
 }
-add_action( 'afteryogietup_theme', 'yogi_jetpackyogietup' );
+add_action( 'after_setup_theme', 'yogi_theme_jetpack_setup' );
 
-if ( ! function_exists( 'yogi_infiniteyogicroll_render' ) ) :
+if ( ! function_exists( 'yogi_theme_infinite_scroll_render' ) ) :
 	/**
 	 * Custom render function for Infinite Scroll.
 	 */
-	function yogi_infiniteyogicroll_render() {
+	function yogi_theme_infinite_scroll_render() {
 		while ( have_posts() ) {
 			the_post();
-			if ( isyogiearch() ) :
+			if ( is_search() ) :
 				get_template_part( 'template-parts/content', 'search' );
 			else :
 				get_template_part( 'template-parts/content', get_post_type() );

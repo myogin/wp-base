@@ -9,7 +9,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package yogi
+ * @package yogi-theme
  */
 
 get_header();
@@ -53,5 +53,5 @@ get_header();
 	</main><!-- #main -->
 
 <?php
-getyogiidebar();
+get_sidebar();
 get_footer();

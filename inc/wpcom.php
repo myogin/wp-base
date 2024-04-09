@@ -4,7 +4,7 @@
  *
  * This file is centrally included from `wp-content/mu-plugins/wpcom-theme-compat.php`.
  *
- * @package yogi
+ * @package yogi-theme
  */
 
 /**
@@ -12,7 +12,7 @@
  *
  * @global array $themecolors
  */
-function yogi_wpcomyogietup() {
+function yogi_theme_wpcom_setup() {
 	global $themecolors;
 
 	// Set theme colors for third party services.
@@ -28,4 +28,4 @@ function yogi_wpcomyogietup() {
 		);
 	}
 }
-add_action( 'afteryogietup_theme', 'yogi_wpcomyogietup' );
+add_action( 'after_setup_theme', 'yogi_theme_wpcom_setup' );

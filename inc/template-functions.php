@@ -2,7 +2,7 @@
 /**
  * Functions which enhance the theme by hooking into WordPress
  *
- * @package yogi
+ * @package yogi-theme
  */
 
 /**
@@ -11,27 +11,27 @@
  * @param array $classes Classes for the body element.
  * @return array
  */
-function yogi_body_classes( $classes ) {
+function yogi_theme_body_classes( $classes ) {
 	// Adds a class of hfeed to non-singular pages.
-	if ( ! isyogiingular() ) {
+	if ( ! is_singular() ) {
 		$classes[] = 'hfeed';
 	}
 
 	// Adds a class of no-sidebar when there is no sidebar present.
-	if ( ! is_activeyogiidebar( 'sidebar-1' ) ) {
+	if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 		$classes[] = 'no-sidebar';
 	}
 
 	return $classes;
 }
-add_filter( 'body_class', 'yogi_body_classes' );
+add_filter( 'body_class', 'yogi_theme_body_classes' );
 
 /**
  * Add a pingback url auto-discovery header for single posts, pages, or attachments.
  */
-function yogi_pingback_header() {
-	if ( isyogiingular() && pings_open() ) {
+function yogi_theme_pingback_header() {
+	if ( is_singular() && pings_open() ) {
 		printf( '<link rel="pingback" href="%s">', esc_url( get_bloginfo( 'pingback_url' ) ) );
 	}
 }
-add_action( 'wp_head', 'yogi_pingback_header' );
+add_action( 'wp_head', 'yogi_theme_pingback_header' );

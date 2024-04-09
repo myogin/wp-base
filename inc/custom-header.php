@@ -8,46 +8,46 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
- * @package yogi
+ * @package yogi-theme
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses yogi_headeryogityle()
+ * @uses yogi_theme_header_style()
  */
-function yogi_custom_headeryogietup() {
-	add_themeyogiupport(
+function yogi_theme_custom_header_setup() {
+	add_theme_support(
 		'custom-header',
 		apply_filters(
-			'yogi_custom_header_args',
+			'yogi_theme_custom_header_args',
 			array(
 				'default-image'      => '',
 				'default-text-color' => '000000',
 				'width'              => 1000,
 				'height'             => 250,
 				'flex-height'        => true,
-				'wp-head-callback'   => 'yogi_headeryogityle',
+				'wp-head-callback'   => 'yogi_theme_header_style',
 			)
 		)
 	);
 }
-add_action( 'afteryogietup_theme', 'yogi_custom_headeryogietup' );
+add_action( 'after_setup_theme', 'yogi_theme_custom_header_setup' );
 
-if ( ! function_exists( 'yogi_headeryogityle' ) ) :
+if ( ! function_exists( 'yogi_theme_header_style' ) ) :
 	/**
 	 * Styles the header image and text displayed on the blog.
 	 *
-	 * @see yogi_custom_headeryogietup().
+	 * @see yogi_theme_custom_header_setup().
 	 */
-	function yogi_headeryogityle() {
+	function yogi_theme_header_style() {
 		$header_text_color = get_header_textcolor();
 
 		/*
 		 * If no custom options for text are set, let's bail.
-		 * get_header_textcolor() options: Any hex value, 'blank' to hide text. Default: add_themeyogiupport( 'custom-header' ).
+		 * get_header_textcolor() options: Any hex value, 'blank' to hide text. Default: add_theme_support( 'custom-header' ).
 		 */
-		if ( get_themeyogiupport( 'custom-header', 'default-text-color' ) === $header_text_color ) {
+		if ( get_theme_support( 'custom-header', 'default-text-color' ) === $header_text_color ) {
 			return;
 		}
 

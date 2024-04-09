@@ -2,63 +2,64 @@
  * WooCommerce Price Filter
  */
 .widget_price_filter {
-  .priceyogilider {
-    margin-bottom: 1.5em;
-  }
 
-  .priceyogilider_amount {
-    text-align: right;
-    line-height: 2.4;
+	.price_slider {
+		margin-bottom: 1.5em;
+	}
 
-    .button {
-      float: left;
-    }
-  }
+	.price_slider_amount {
+		text-align: right;
+		line-height: 2.4;
 
-  .ui-slider {
-    position: relative;
-    text-align: left;
-  }
+		.button {
+			float: left;
+		}
+	}
 
-  .ui-slider .ui-slider-handle {
-    position: absolute;
-    z-index: 2;
-    width: 1em;
-    height: 1em;
-    cursor: ew-resize;
-    outline: none;
-    background: $color__link;
-    box-sizing: border-box;
-    margin-top: -0.25em;
-    opacity: 1;
+	.ui-slider {
+		position: relative;
+		text-align: left;
+	}
 
-    &:last-child {
-      margin-left: -1em;
-    }
+	.ui-slider .ui-slider-handle {
+		position: absolute;
+		z-index: 2;
+		width: 1em;
+		height: 1em;
+		cursor: ew-resize;
+		outline: none;
+		background: $color__link;
+		box-sizing: border-box;
+		margin-top: -0.25em;
+		opacity: 1;
 
-    &:hover,
-    &.ui-state-active {
-      box-shadow: 0 0 0 0.25em rgba(#000, 0.1);
-    }
-  }
+		&:last-child {
+			margin-left: -1em;
+		}
 
-  .ui-slider .ui-slider-range {
-    position: absolute;
-    z-index: 1;
-    display: block;
-    border: 0;
-    background: $color__link;
-  }
+		&:hover,
+		&.ui-state-active {
+			box-shadow: 0 0 0 0.25em rgba(#000, 0.1);
+		}
+	}
 
-  .priceyogilider_wrapper .ui-widget-content {
-    background: rgba(0, 0, 0, 0.1);
-  }
+	.ui-slider .ui-slider-range {
+		position: absolute;
+		z-index: 1;
+		display: block;
+		border: 0;
+		background: $color__link;
+	}
 
-  .ui-slider-horizontal {
-    height: 0.5em;
-  }
+	.price_slider_wrapper .ui-widget-content {
+		background: rgba(0, 0, 0, 0.1);
+	}
 
-  .ui-slider-horizontal .ui-slider-range {
-    height: 100%;
-  }
+	.ui-slider-horizontal {
+		height: 0.5em;
+	}
+
+	.ui-slider-horizontal .ui-slider-range {
+		height: 100%;
+	}
 }

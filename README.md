@@ -1,8 +1,8 @@
-[![Build Status](https://travis-ci.org/Automattic/yogi.svg?branch=master)](https://travis-ci.org/Automattic/yogi)
+[![Build Status](https://travis-ci.org/Automattic/yogi-theme.svg?branch=master)](https://travis-ci.org/Automattic/yogi-theme)
 
-# \yogi
+# yogi-theme
 
-Hi. I'm a starter theme called `yogi`, or `underscores`, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
+Hi. I'm a starter theme called `yogi-theme`, or `underscores`, if you like. I'm a theme meant for hacking so don't use me as a Parent Theme. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.
 
 My ultra-minimal CSS might make me look like theme tartare but that means less stuff to get in your way when you're designing your awesome theme. Here are some of the other more interesting things you'll find here:
 
@@ -22,7 +22,7 @@ My ultra-minimal CSS might make me look like theme tartare but that means less s
 
 ### Requirements
 
-`yogi` requires the following dependencies:
+`yogi-theme` requires the following dependencies:
 
 - [Node.js](https://nodejs.org/)
 - [Composer](https://getcomposer.org/)
@@ -31,18 +31,18 @@ My ultra-minimal CSS might make me look like theme tartare but that means less s
 
 Clone or download this repository, change its name to something else (like, say, `megatherium-is-awesome`), and then you'll need to do a six-step find and replace on the name in all the templates.
 
-1. Search for `'yogi'` (inside single quotations) to capture the text domain and replace with: `'megatherium-is-awesome'`.
-2. Search for `yogi_` to capture all the functions names and replace with: `megatherium_is_awesome_`.
-3. Search for `Text Domain: yogi` in `style.css` and replace with: `Text Domain: megatherium-is-awesome`.
-4. Search for <code>&nbsp;\yogi</code> (with a space before it) to capture DocBlocks and replace with: <code>&nbsp;Megatherium_is_Awesome</code>.
-5. Search for `yogi-` to capture prefixed handles and replace with: `megatherium-is-awesome-`.
-6. Search for `YOGI_` (in uppercase) to capture constants and replace with: `MEGATHERIUM_IS_AWESOME_`.
+1. Search for `'yogi-theme'` (inside single quotations) to capture the text domain and replace with: `'megatherium-is-awesome'`.
+2. Search for `yogi_theme` to capture all the functions names and replace with: `megatherium_is_awesome_`.
+3. Search for `Text Domain: yogi-theme` in `style.css` and replace with: `Text Domain: megatherium-is-awesome`.
+4. Search for <code>&nbsp;yogi-theme</code> (with a space before it) to capture DocBlocks and replace with: <code>&nbsp;Megatherium_is_Awesome</code>.
+5. Search for `yogi-theme-` to capture prefixed handles and replace with: `megatherium-is-awesome-`.
+6. Search for `YOGI_THEME_` (in uppercase) to capture constants and replace with: `MEGATHERIUM_IS_AWESOME_`.
 
-Then, update the stylesheet header in `style.css`, the links in `footer.php` with your own information and rename `yogi.pot` from `languages` folder to use the theme's slug. Next, update or delete this readme.
+Then, update the stylesheet header in `style.css`, the links in `footer.php` with your own information and rename `yogi-theme.pot` from `languages` folder to use the theme's slug. Next, update or delete this readme.
 
 ### Setup
 
-To start using all the tools that come with `yogi` you need to install the necessary Node.js and Composer dependencies :
+To start using all the tools that come with `yogi-theme` you need to install the necessary Node.js and Composer dependencies :
 
 ```sh
 $ composer install
@@ -51,7 +51,7 @@ $ npm install
 
 ### Available CLI commands
 
-`yogi` comes packed with CLI commands tailored for WordPress theme development :
+`yogi-theme` comes packed with CLI commands tailored for WordPress theme development :
 
 - `composer lint:wpcs` : checks all PHP files against [PHP Coding Standards](https://developer.wordpress.org/coding-standards/wordpress-coding-standards/php/).
 - `composer lint:php` : checks all PHP files for syntax errors.

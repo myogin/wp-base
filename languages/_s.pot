@@ -2,8 +2,8 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: yogi 1.0.0\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/yogi\n"
+"Project-Id-Version: yogi-theme 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/yogi-theme\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -12,10 +12,10 @@ msgstr ""
 "POT-Creation-Date: 2020-04-17T21:03:15+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.4.0\n"
-"X-Domain: yogi\n"
+"X-Domain: yogi-theme\n"
 
 #. Theme Name of the theme
-msgid "yogi"
+msgid "yogi-theme"
 msgstr ""
 
 #. Theme URI of the theme
@@ -23,7 +23,7 @@ msgid "https://underscores.me/"
 msgstr ""
 
 #. Description of the theme
-msgid "Hi. I'm a starter theme called <code>yogi</code>, or <em>underscores</em>, if you like. I'm a theme meant for hacking so don't use me as a <em>Parent Theme</em>. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for."
+msgid "Hi. I'm a starter theme called <code>yogi-theme</code>, or <em>underscores</em>, if you like. I'm a theme meant for hacking so don't use me as a <em>Parent Theme</em>. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for."
 msgstr ""
 
 #. Author of the theme
