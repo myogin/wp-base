@@ -149,6 +149,12 @@ function yogi_theme_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'yogi_theme_scripts' );
 
+function add_bootstrap_scripts() {
+	wp_enqueue_style( 'bootstrap-style', get_template_directory_uri() . '/css/bootstrap.min.css');
+	wp_enqueue_script( 'bootstrap-script', get_template_directory_uri() . '/js/bootstrap.bundle.min.js', array(), "", true );
+}
+add_action( 'wp_enqueue_scripts', 'add_bootstrap_scripts' );
+
 /**
  * Implement the Custom Header feature.
  */
