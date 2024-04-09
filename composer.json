@@ -31,5 +31,10 @@
   "support": {
     "issues": "https://github.com/Automattic/yogi-theme/issues",
     "source": "https://github.com/Automattic/yogi-theme"
+  },
+  "config": {
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
   }
 }
