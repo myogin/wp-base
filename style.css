@@ -716,6 +716,116 @@ textarea {
 	flex: 1 0 50%;
 }
 
+.yg-navbar {
+	--yg-navbar-padding-x: 0;
+	--yg-navbar-padding-y: 1.25rem;
+	--yg-navbar-color: var(--yg-gray-700);
+	--yg-navbar-hover-color: var(--yg-primary);
+	--yg-navbar-disabled-color: rgba(var(--yg-emphasis-color-rgb), 0.3);
+	--yg-navbar-active-color: var(--yg-primary);
+	--yg-navbar-brand-padding-y: 0.15rem;
+	--yg-navbar-brand-margin-end: 0;
+	--yg-navbar-brand-font-size: 1.5rem;
+	--yg-navbar-brand-color: var(--yg-primary);
+	--yg-navbar-brand-hover-color: var(--yg-primary);
+	--yg-navbar-nav-link-padding-x: 1.5rem;
+	--yg-navbar-toggler-padding-y: 0.25rem;
+	--yg-navbar-toggler-padding-x: 0.75rem;
+	--yg-navbar-toggler-font-size: 1.1875rem;
+	--yg-navbar-toggler-border-color: transparent;
+	--yg-navbar-toggler-border-radius: var(--yg-border-radius);
+	--yg-navbar-toggler-focus-width: 0;
+	--yg-navbar-toggler-transition: box-shadow 0.15s ease-in-out;
+	transition: all 0.2s ease-in-out;
+	transition-property: background-color, color;
+	z-index: 1030;
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: var(--yg-navbar-padding-y) var(--yg-navbar-padding-x);
+	position: relative;
+}
+
+.yg-navbar .container {
+	align-items: center;
+	display: flex;
+	flex-wrap: inherit;
+	justify-content: space-between;
+}
+
+.yg-navbar .collapse:not(.show) {
+	display: none;
+}
+
+.yg-navbar .navbar-brand {
+	white-space: nowrap;
+}
+
+.yg-navbar .navbar-toggler {
+	margin-left: auto;
+	background-color: transparent;
+	border: var(--yg-border-width) solid var(--yg-navbar-toggler-border-color);
+	border-radius: var(--yg-navbar-toggler-border-radius);
+	color: var(--yg-navbar-color);
+	font-size: var(--yg-navbar-toggler-font-size);
+	line-height: 1;
+	padding: var(--yg-navbar-toggler-padding-y) var(--yg-navbar-toggler-padding-x);
+	transition: var(--yg-navbar-toggler-transition);
+}
+
+.yg-navbar .navbar-collapse {
+	align-items: center;
+	flex-basis: 100%;
+	flex-grow: 1;
+}
+
+.yg-navbar .navbar-brand:hover,
+.yg-navbar .navbar-toggler:hover {
+	cursor: pointer;
+}
+
+@media (max-width: 991.98px) {
+	.yg-navbar .navbar-collapse.show {
+		background-color: #fff;
+		border-radius: 3;
+		box-shadow: 0 1.5rem 4rem rgba(22, 28, 45, 0.15);
+		height: auto;
+		left: 1rem;
+		max-height: calc(100% - 2rem) !important;
+		overflow-x: hidden;
+		overflow-y: scroll;
+		position: fixed;
+		top: 1rem;
+		min-height: calc(100% - 2rem) !important;
+		width: calc(100% - 2rem);
+	}
+	.yg-navbar .navbar-collapse.collapsing,
+	.yg-navbar .navbar-collapse.show {
+		transform-origin: top right;
+		transition: all 0.2s ease-in-out;
+		transition-property: opacity, transform;
+	}
+	.yg-navbar .navbar-collapse.show {
+		opacity: 1;
+		transform: scale(1);
+	}
+	.yg-navbar .navbar-collapse.collapsing {
+		opacity: 0;
+		transform: scale(0.9);
+	}
+}
+
+@media (min-width: 992px) {
+	.yg-navbar .navbar-toggler {
+		display: none;
+	}
+	.yg-navbar .navbar-collapse {
+		display: flex !important;
+		flex-basis: auto;
+	}
+}
+
 /* Posts and pages
 --------------------------------------------- */
 .sticky {
